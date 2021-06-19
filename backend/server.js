@@ -17,6 +17,14 @@ connection.once('open',() =>{
     console.log('Mongo DB connection Succesful')
 });
 
+const exerciseRouter=require('./routes/exercises');
+const UsersRouter=require('./routes/users');
+const FoodiesRouter=require('./routes/foodies');
+
+app.use('/exercises',exerciseRouter);
+app.use('/users',UsersRouter);
+app.use('/foodies',FoodiesRouter)
+
 app.listen(port, () => {
     console.log('Server is runing on port: ${port}');
 });
