@@ -14,7 +14,7 @@ const Imageslider = (props) => {
                         src={first} 
                         className="d-block w-100"
                         alt="First slide"
-                        height="476px"
+                        height="500px"
                         >
                     </img>
                 </Carousel.Item>
@@ -23,7 +23,7 @@ const Imageslider = (props) => {
                         src={second} 
                         className="d-block w-100"
                         alt="First slide"
-                        height="476px"
+                        height="500px"
                         >
                     </img>
                 </Carousel.Item>
@@ -32,7 +32,7 @@ const Imageslider = (props) => {
                         src={third} 
                         className="d-block w-100"
                         alt="First slide"
-                        height="476px"
+                        height="500px"
                         >
                     </img>
                 </Carousel.Item>

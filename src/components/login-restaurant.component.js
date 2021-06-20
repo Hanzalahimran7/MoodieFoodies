@@ -97,9 +97,9 @@ export default class loginRestaurant extends Component {
 
     console.log(user);
 
-    users= users.filter(el => el.username === user.username);
+    users= users.filter(el => el.name === user.username);
     if (users.length>0){
-        if (users[0].password==user.password){
+        if (users[0].password===user.password){
             console.log(users[0]);}
         else{
             console.log("Fuck off 2");
@@ -111,7 +111,6 @@ export default class loginRestaurant extends Component {
     this.setState({
       username: '',
       password: '',
-      email: ''
     })
   }
 }
@@ -119,7 +118,7 @@ export default class loginRestaurant extends Component {
   render() {
     return (
       <div>
-        <h3>Create New User</h3>
+        <h3>Login Restaurant</h3>
         <form onSubmit={this.onSubmit}>
         <div class="form-group">
             <label for="username">Username:</label>
@@ -129,7 +128,7 @@ export default class loginRestaurant extends Component {
               value={this.state.username}
               onChange={this.onChangeUsername}
               class="form-control" 
-              placeholder="Enter username" 
+              placeholder="Enter usernass" 
               id="username" />
   
               <div className="text-danger">{this.state.errors.username}</div>

@@ -87,7 +87,6 @@ export default class loginUser extends Component {
 
 
   onSubmit(e) {
-    let errors = {};
     e.preventDefault();
     if(this.validate()){
     const user = {
@@ -100,7 +99,7 @@ export default class loginUser extends Component {
 
     users= users.filter(el => el.username === user.username);
     if (users.length>0){
-        if (users[0].password==user.password){
+        if (users[0].password===user.password){
             console.log(users[0]);}
             this.setState({
                 username: '',

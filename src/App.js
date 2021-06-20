@@ -13,14 +13,15 @@ import createrestaurant from './components/create-restaurant.component';
 import singupform from './components/singup-form'
 import loginUser from './components/login-user.components';
 import Imageslider from './components/Imageslider.component';
+import loginRestaurant from './components/login-restaurant.component';
 function App() {
   return (
     <Router>
-      <div className="container">
+
       <div className="page-container">
         <Navbar />
         <br/>
-        <div className='content-wrap'>
+        <div className='content-wrap container'>
           <Route path='/' exact component={Imageslider} />
           <Route path='/edit/:id' component={EditExercise} />
           <Route path='/create' component={CreateExercise} />
@@ -28,10 +29,11 @@ function App() {
           <Route path= '/foodies/add' component={singupform} />
           <Route path= '/restaurant/add' component={createrestaurant} />
           <Route path= '/foodies/login' component={loginUser} />
+          <Route path= '/restaurant/login' component={loginRestaurant} />
         </div>
           <Footer/>
-      </div>
-      </div>
+          </div>
+
     </Router>
 
   );

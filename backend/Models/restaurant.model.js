@@ -14,7 +14,7 @@ const restaurantSchema=new Schema({
         type:String,
         required:true,
         unique:false,
-        minlength:8
+        minlength:2
     },
     password:{
         type:String,

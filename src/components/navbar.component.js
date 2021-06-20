@@ -1,35 +1,56 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import './Footer.css'
+import Button from '@material-ui/core/Button';  
+import Menu from '@material-ui/core/Menu';  
+import MenuItem from '@material-ui/core/MenuItem';  
+import AppBar from '@material-ui/core/AppBar';  
+import Toolbar from '@material-ui/core/Toolbar'; 
+
 
 export default class Navbar extends Component {
 
   render() {
     return (
-      <nav className="navbar navbar-dark bg-dark navbar-expand-lg">
-        <Link to="/" className="navbar-brand">ExcerTracker</Link>
-        <div className="collpase navbar-collapse">
-        <ul className="navbar-nav mr-auto">
-          <li className="navbar-item">
-          <Link to="/" className="nav-link">Exercises</Link>
+      <section className="header">
+      <nav>
+        
+      
+  <div class="nav-link">
+      <ul>
+    
+          <li><Link style= {{textdecoration: 'none', color: 'white'}} to ="/">
+            <MenuItem>Exercise</MenuItem>
+            </Link>
           </li>
-          <li className="navbar-item">
-          <Link to="/foodies/add" className="nav-link">Signup</Link>
-          </li>
-          <li className="navbar-item">
-          <Link to="/restaurant/add" className="nav-link">Restaurant Signup</Link>
-          </li>
-          <li className="navbar-item">
-          <Link to="/create" className="nav-link">Create Exercise Log</Link>
-          </li>
-          <li className="navbar-item">
-          <Link to="/foodies/login" className="nav-link">Login</Link>
-          </li>
-          <li className="navbar-item">
-          <Link to="/createUser" className="nav-link">Create User</Link>
-          </li>
-        </ul>
-        </div>
-      </nav>
+          <li><Link style= {{textdecoration: 'none', color: 'white'}} to="/foodies/add">
+          <MenuItem>Sign up</MenuItem>
+            </Link></li>
+          <li><Link style= {{textdecoration: 'none', color: 'white'}} to="/create">
+          <MenuItem> Create Exercise log</MenuItem>
+            </Link></li>
+          <li><Link style= {{textdecoration: 'none', color: 'white'}} to="/user">
+          <MenuItem>Create User</MenuItem>
+            </Link></li>
+            <li><Link style= {{textdecoration: 'none', color: 'white'}} to ="/restaurant/add">
+            <MenuItem>Restaurant Signup</MenuItem>
+          </Link></li>
+          <li><Link style= {{textdecoration: 'none', color: 'white'}} to ="/restaurant/login">
+          <MenuItem>Restaurant Login</MenuItem>
+          </Link></li>
+          <li><Link style= {{textdecoration: 'none', color: 'white'}} to ="/foodies/login">
+          <MenuItem>Login</MenuItem>
+            </Link></li>
+          
+          
+          
+      </ul>
+  </div>
+</nav>
+</section>
+
+      
+      
     );
   }
 }
