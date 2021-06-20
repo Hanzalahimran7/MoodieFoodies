@@ -9,7 +9,10 @@ import EditExercise from "./components/edit-exercise.component";
 import CreateExercise from './components/create-exercise.component';
 import CreateUser from './components/create-user.component';
 import Footer from './components/Footer.component'
-import singupform from './components/singup-form';
+import createrestaurant from './components/create-restaurant.component';
+import singupform from './components/singup-form'
+import loginUser from './components/login-user.components';
+import Imageslider from './components/Imageslider.component';
 function App() {
   return (
     <Router>
@@ -18,11 +21,13 @@ function App() {
         <Navbar />
         <br/>
         <div className='content-wrap'>
-          <Route path='/' exact component={ExercisesList} />
+          <Route path='/' exact component={Imageslider} />
           <Route path='/edit/:id' component={EditExercise} />
           <Route path='/create' component={CreateExercise} />
-          <Route path='/user' component={CreateUser} />
+          <Route path='/createUser' component={CreateUser} />
           <Route path= '/foodies/add' component={singupform} />
+          <Route path= '/restaurant/add' component={createrestaurant} />
+          <Route path= '/foodies/login' component={loginUser} />
         </div>
           <Footer/>
       </div>
